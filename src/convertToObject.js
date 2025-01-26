@@ -14,6 +14,8 @@ function convertToObject(sourceString) {
 
     if (key && value) {
       result[key.trim()] = value.trim();
+    } else if (!key || !value) {
+      result[key.trim()] = undefined;
     }
   });
 
